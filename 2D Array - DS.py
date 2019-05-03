@@ -15,31 +15,19 @@ import sys
 # Complete the hourglassSum function below.
 def hourglassSum(arr):
      """ count of hourlasses sum and peak it into a list"""
-     #hg = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] 
+     
       m = arr[0][0] +arr[0][1] + arr[0][2] + arr[1][1] + arr[2][0] + arr[2][1] + arr[2][2]
      
      for i in range(4):
          for k in range(4):
              c = 0
-             #hg[0][0]
              c += arr[i][k]
-             #hg[0][1]
              c += arr[i][k+1]
-             #hg[0][2]
              c += arr[i][k+2]
-             
-             
-             #hg[1][1]
              c += arr[i+1][k+1]
-             
-             
-             #hg[2][0]
              c += arr[i+2][k]
-             #hg[2][1]
              c += arr[i+2][k+1]
-             #hg[2][2]
              c += arr[i+2][k+2]
-             #print(hg)      
              if c > m: m =c
      return m       
 
