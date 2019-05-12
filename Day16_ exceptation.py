@@ -10,15 +10,12 @@ import sys
 class Calculator(Exception):
     
     def power(self,n, p):
-        
-        
-        try:
-            if n < 0 and p < 0:
-                raise Calculator("n and p should be non-negative")
-        except Calculator as mr:
-            print(mr)
+        self.n = n
+        self.p = p
+        if n < 0 and p < 0:
+            raise Exception("n and p should be non-negative")
         else:
-            print(n**p)
+            return n**p
             
          
      
