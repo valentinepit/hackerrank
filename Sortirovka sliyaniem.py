@@ -32,3 +32,15 @@ def merge(A:list, B:list):
         n += 1
     
     return C    
+
+def mergeSort(A:list):
+    if len(A)<=1: return
+    middle = len(A)//2
+    L = [A[i] for i in range(middle)]
+    R = [A[i] for i in range (middle, len(A))]
+    mergeSort(L)
+    mergeSort(R)
+    C = merge(L, R)
+    for i in range(len(A)): #нельзя просто написать А=С это только ссылку на объект поменят
+        A[i] = C[i]
+    
