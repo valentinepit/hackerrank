@@ -31,5 +31,6 @@ if __name__ == '__main__':
 
         k = int(nk[1])
         
-        finde(n, k)      
+       
+       finde(n, k)      
         
